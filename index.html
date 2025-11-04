@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keuangan Awa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Atur Keuangan Awa 💸</h1>
+
+  <div class="input-section">
+    <input type="text" id="kategori" placeholder="Kategori (misal: Makan, Kost)">
+    <input type="number" id="jumlah" placeholder="Jumlah (Rp)">
+    <button onclick="tambahData()">Tambah</button>
+  </div>
+
+  <table id="tabelKeuangan">
+    <thead>
+      <tr>
+        <th>Kategori</th>
+        <th>Jumlah (Rp)</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Total: Rp <span id="total">0</span></h2>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,30 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keuangan Awa</title>
+  <title>Financial Planner Awa</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Atur Keuangan Awa 💸</h1>
+  <div class="container"> 
+    <h2>📊 Grafik Pengeluaran</h2>
+<canvas id="chartPengeluaran" width="300" height="300"></canvas>
+    <h1>FINANCIAL PLANNER</h1>
+    <p class="subtitle">SITI SALWA TAZRIANI</p>
 
-  <div class="input-section">
-    <input type="text" id="kategori" placeholder="Kategori (misal: Makan, Kost)">
-    <input type="number" id="jumlah" placeholder="Jumlah (Rp)">
-    <button onclick="tambahData()">Tambah</button>
+    <div class="dashboard">
+      <div class="card">
+        <h3>INCOME</h3>
+        <p>Rp <span id="income">2,400,000</span></p>
+      </div>
+      <div class="card">
+        <h3>EXPENSES</h3>
+        <p>Rp <span id="expenses">0</span></p> 
+      </div>
+      <div class="card">
+        <h3>SAVINGS</h3>
+        <p>Rp <span id="savings">0</span></p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>💰 GAJI</h2>
+      <table id="tabelKeuangan">
+        <thead>
+          <tr>
+            <th>Kategori</th>
+            <th>Jumlah (Rp)</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="input-section">
+      <input type="text" id="kategori" placeholder="Kategori (misal: Skincare)">
+      <input type="number" id="jumlah" placeholder="Jumlah (Rp)">
+      <button onclick="tambahData()">Tambah</button>
+    </div>
+
+    <h2>Total: Rp <span id="total">0</span></h2>
   </div>
 
-  <table id="tabelKeuangan">
-    <thead>
-      <tr>
-        <th>Kategori</th>
-        <th>Jumlah (Rp)</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <h2>Total: Rp <span id="total">0</span></h2>
-
   <script src="script.js"></script>
+  <!-- Library Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
